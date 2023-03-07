@@ -1,0 +1,24 @@
+algoritmo "Atendimento escolaridade"
+var
+  vet: vetor[1..10] de Inteiro
+  a, b, aux: Inteiro
+Inicio
+  Para a <- 1 ate 10 faca
+    Escreva ("Digite a sua numeração: ")
+    Leia (vet [a])
+   FimPara
+   
+   Para a <- 1 ate 9 faca
+    Para b <- a+1 ate 10 faca
+      Se (vet [a] > vet [b]) entao
+        aux <- vet [a] 
+        vet [a] <- vet [b]
+        vet [b] <- aux
+      FimSe
+    FimPara
+   FimPara
+   
+  Para a <- 1 ate 10 faca
+    Escreva ("A sequência de atendimento por ficha é: {", vetor[a], "}. Por favor, aguardar a sua vez.")
+  FimPara
+FimAlgoritmo
